@@ -27,7 +27,19 @@ SET name = 'Milk Packet'
 WHERE name = 'Milk'; 
 SET SQL_SAFE_UPDATES = 1;
 
-SELECT * FROM PRODUCTS;
+
+-- making the uom_id of products table foreign key 
+ALTER TABLE products
+ADD CONSTRAINT fk_uom_id
+FOREIGN KEY (uom_id)
+REFERENCES uom(uom_id);
+
+SELECT * FROM products;
+-- SET FOREIGN_KEY_CHECKS = 0;
+-- TRUNCATE TABLE products;
+-- SET FOREIGN_KEY_CHECKS = 1;
+
+
 
 -- creating uom table
 CREATE TABLE uom (
@@ -41,34 +53,11 @@ INSERT INTO uom (uom_name) VALUES -- as uom_id is autoIncrement
 
 SELECT * FROM uom;
 
--- making the uom_id of products table foreign key 
-ALTER TABLE products
-ADD CONSTRAINT fk_uom_id
-FOREIGN KEY (uom_id)
-REFERENCES uom(uom_id);
 
-SELECT * FROM products;
+-- creating cart table
+CREATE TABLE cart (
+	product_id INT,
+    quant INT
+)
 
--- creating order table
-CREATE TABLE orders (
- order_id INT PRIMARY KEY AUTO_INCREMENT,
- customer_name VARCHAR(100) NOT NULL,
- total DECIMAL(10,2) NOT NULL,
- dateTime DATETIME DEFAULT CURRENT_TIMESTAMP
-);
-
-SELECT * FROM orders;
-
--- creating order_details table
-CREATE TABLE order_details (
-	order_id INT NOT NULL ,
-    product_id INT NOT NULL,
-    quantity DECIMAL(10, 2) NOT NULL,
-    total_price DECIMAL(10, 2) NOT NULL,
-    PRIMARY KEY (order_id, product_id),
-    FOREIGN KEY (order_id) REFERENCES orders(order_id),
-	FOREIGN KEY (product_id) REFERENCES products(product_id)
-);
-
-SELECT * FROM order_details;
-
+SELECT * FROM cart;
