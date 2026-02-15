@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/static/fonts/Gilroy/Gilroy-Medium.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+    color: #fff;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+#heading {
+    text-transform: uppercase;
+    font-size: 6vw;
+    letter-spacing: 2px;
+}
+
+.home-page {
+    margin: 0;
+    height: 100vh;
+
+    background-image: url("/static/images/bgH.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content {
+    color: white;
+}
+
+
+.home-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+
+.home-content .btn {
+    padding: 12px 25px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.home-content .btn:hover {
+    transform: scale(1.08);
+}

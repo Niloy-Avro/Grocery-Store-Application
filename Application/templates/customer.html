@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet"
+     href="/static/customerStyle.css">
+
+    <title>Customer Store</title>
+</head>
+
+<body class="customer-page">
+
+    <div class="container mt-4">
+
+        <h2 class="text-center mb-4" id="heading">
+            🛒<br>Grocery Store
+        </h2>
+
+        <div class="d-flex justify-content-between mb-3">
+
+            <a href="/" class="btn btn-back">
+                Back
+            </a>
+
+            <a href="/cart" 
+            class="btn btn-cart">
+                View Cart
+            </a>
+
+        </div>
+
+        <!-- PRODUCT TABLE -->
+        <table class="table table-bordered table-hover">
+
+            <thead class="table-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Unit</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% if products %}
+                    {% for product in products %}
+                    <tr>
+                        <td>{{ product.name }}</td>
+                        <td>₹{{ "%.2f"|format(product.price_per_unit) }}</td>
+                        <td>{{ product.uom_name }}</td>
+                        <td>
+                            <a href="/addCart/{{ product.product_id }}"
+                               class="btn btn-primary btn-sm btn-add-cart">
+                               Add to Cart
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="4" class="text-center text-muted">
+                            No Products Available
+                        </td>
+                    </tr>
+                {% endif %}
+            </tbody>
+
+        </table>
+
+    </div>
+
+</body>
+</html>

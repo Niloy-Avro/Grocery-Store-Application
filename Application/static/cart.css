@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/static/fonts/Gilroy/Gilroy-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Dustries';
+    src: url('/static/fonts/Dustries Font/dustries-demo.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+    color: #fff;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/* PAGE BACKGROUND */
+.cart-page {
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-image: url("/static/images/cart.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* CONTAINER CARD STYLE */
+.container {
+    background: rgba(0, 0, 0, 0.466);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* TITLE */
+h2 {
+    font-family: Dustries;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    font-size: 3vw;
+    color: #ffffff;
+}
+
+/* TABLE POLISH */
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* TOTAL SECTION */
+.total-section {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.total-section h4 {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.total-section span {
+    color: #28a745;
+    margin-left: 10px;
+}
+
+/* BUTTON POLISH */
+.btn {
+    border-radius: 8px;
+    min-width: 170px;
+    transition: 0.3s ease-in-out;
+    justify-content: center;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-success {
+    background-color: #218838;
+}
+
+.btn-success:hover {
+    background-color: #28a745;
+}
+
+.btn-secondary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-secondary:hover {
+    background-color: #005cb2d7;
+    border-color: #005cb2d7;
+}

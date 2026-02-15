@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/static/fonts/Gilroy/Gilroy-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Dustries';
+    src: url('/static/fonts/Dustries Font/dustries-demo.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+    color: #fff;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.customer-page {
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-image: url("/static/images/bgc.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#heading {
+    font-family: 'Dustries';
+    font-size: 3vw;
+    letter-spacing: 4.5px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.466);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+h2 {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.btn {
+    min-width: 140px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-back {
+    min-width: 130px;
+    background-color: #218838;
+    color: #ffffff;
+    font-size: large;
+}
+
+.btn-back:hover {
+    transform: scale(1.08);
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.btn-cart {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    min-width: 130px;
+    color: #ffffff;
+    font-size: large;
+}
+
+.btn-cart:hover {
+    background-color: #005cb2d7;
+    color: #ffffff;
+    transform: scale(1.08);
+}
+
+.btn-add-cart:hover {
+    transform: scale(1.05);
+}
